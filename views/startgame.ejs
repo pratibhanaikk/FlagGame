@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Game Page</title>
+  <link rel="stylesheet" href="/style/display.css">
+  <style>
+    #loading {
+      display: none;
+      font-size: 24px;
+      margin-top: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <form id="start-form">
+    <button type="submit" id="start-button">Start Game</button>
+  </form>
+
+  <div id="loading">Loading... Please wait</div>
+
+  <script>
+    const form = document.getElementById('start-form');
+    const button = document.getElementById('start-button');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      button.classList.add('loading');
+
+      setTimeout(() => {
+        window.location.href = '/';
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

@@ -48,10 +48,11 @@ app.get("/", (req, res) => {
 app.post("/capitaltype", (req, res) => {
     const datacountry = quiz[quiz.findIndex((q) => q.capital === req.body.country)];
     console.log(datacountry);
-    if(datacountry.country.toLowerCase() == req.body.capital.toLowerCase()){
+    if(datacountry.country.toLowerCase() == req.body.capital.toLowerCase().trim()){
          score=parseInt(req.body.score)+1;
     }else{
         score = 0;
+        return res.render('startgame.ejs');
     }
     res.redirect("/");
 })

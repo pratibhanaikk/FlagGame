@@ -11,7 +11,7 @@ body {
 }
 
 #form-element {
-    background-color: rgb(231, 177, 197);
+    background-color: rgb(248, 248, 248);
     padding: 30px;
     width: 600px;
     box-shadow: 0 0 10px rgba(174, 5, 226, 0.2);
@@ -46,9 +46,9 @@ body {
 }
 
 #country-display {
-    padding-top: 20px;
-    padding-bottom: 30px;
-    font-size: 48px;            
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 100px;            
     font-weight: bold;          
     text-align: center;         
     display: flex;
@@ -57,3 +57,44 @@ body {
     width: 100%;
     color: #2a005f;             
 }
+
+#start-button{
+    padding: 10px;
+    width: 400px;
+    font-size: 60px;
+    border-radius: 100px;
+    background-color: rgb(224, 79, 122);
+    padding: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#start-button:active {
+      transform: translateY(2px);
+      box-shadow: 0 3px 10px rgb(224, 79, 122);
+    }
+
+    #start-button.loading {
+      pointer-events: none;
+      background-color: rgb(224, 79, 122);
+      color: transparent;
+    }
+
+    #start-button.loading::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      border: 3px solid white;
+      border-top-color: transparent;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
