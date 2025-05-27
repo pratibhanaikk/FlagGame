@@ -1,0 +1,59 @@
+body {
+    background: url('/images/flags-of-nations-stockcake.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#form-element {
+    background-color: rgb(231, 177, 197);
+    padding: 30px;
+    width: 600px;
+    box-shadow: 0 0 10px rgba(174, 5, 226, 0.2);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#input-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#capital-input{
+    padding: 10px;
+    margin-bottom: 50px;
+    width: 200px;
+    border-radius: 8px;
+   font-size: large;
+    border: solid rgb(53, 15, 76);
+}
+
+#submit-button{
+   padding: 10px;
+   width: 600px;
+   font-size: large;
+    border-radius: 8px;
+    background-color: rgb(224, 79, 122);
+}
+
+#country-display {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 48px;            
+    font-weight: bold;          
+    text-align: center;         
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #2a005f;             
+}

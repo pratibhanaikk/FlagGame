@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Quiz</title>
+    <link rel="stylesheet" href="/style/display.css">
+</head>
+<body>
+    <div id="form-element">
+        <form method="POST" action="/capitaltype">
+            <% if(locals.data){ %>
+            <h3 id = 'score'>Total Score: <%= data.score %></h3>
+            <h1 id = 'country-display'><%= data.curcountry %></h1>
+            <input type="hidden" name="score" value="<%= data.score %>">
+             <input type="hidden" name="country" value="<%= data.curcountry %>">
+             <div id="input-element">
+               <input type="text" name="capital" id="capital-input" placeholder="Enter the capital">
+               <button type="submit" id="submit-button">Submit</button>
+             </div>
+            <% } %>
+        </form>
+    </div>
+</body>
+</html>
